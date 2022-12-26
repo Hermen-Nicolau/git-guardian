@@ -32,13 +32,12 @@ gcloud compute instances create cks-worker --zone=europe-west3-c \
 gcloud config set compute/zone us-east1-b
 gcloud compute ssh master
 sudo -i
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_master.sh)
-
+#install kubeadm in cluster
 #Copy the kubeadm join command an paste it after running the second script in the worker node 
 
 gcloud compute ssh worker
 sudo -i
-bash <(curl -s https://raw.githubusercontent.com/killer-sh/cks-course-environment/master/cluster-setup/latest/install_worker.sh)
+#run kubeadm scripts in the worker
 
 #open firewall ports to use nodeports 
 gcloud compute firewall-rules create nodeport --allow tcp:30000-40000
