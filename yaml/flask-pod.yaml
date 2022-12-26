@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: flask-app
+  name: flask-app
+spec:
+  containers:
+  - image: digitalocean/flask-helloworld
+    command: ["/scripts/wrapper.sh"]
+    name: flask
+    resources: {}
+    env:
+    - name: POD_ID
+       valueFrom:
+        fieldRef:
+         fieldPath: metadata.uid
+    volumeMounts:
+        - name: wrapper
+          mountPath: /scripts
+  volumes:
+  - name: wrapper
+    configMap:
+      name: wrapper
+      defaultMode: 0744
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

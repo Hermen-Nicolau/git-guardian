@@ -1,0 +1,37 @@
+*   Trying 35.231.137.204:31969...
+* Connected to 35.231.137.204 (35.231.137.204) port 31969 (#0)
+> GET / HTTP/1.1
+> Host: 35.231.137.204:31969
+> User-Agent: curl/7.84.0
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 19
+< Server: Werkzeug/0.16.1 Python/3.8.1
+< Date: Mon, 26 Dec 2022 01:32:35 GMT
+<
+* Closing connection 0
+Hello, GitGuardian!%
+
+=================================================================================
+
+*   Trying 35.231.137.204:31969...
+* Connected to 35.231.137.204 (35.231.137.204) port 31969 (#0)
+> GET /pod-id HTTP/1.1
+> Host: 35.231.137.204:31969
+> User-Agent: curl/7.84.0
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+* HTTP 1.0, assume close after body
+< HTTP/1.0 200 OK
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 36
+< Server: Werkzeug/0.16.1 Python/3.8.1
+< Date: Mon, 26 Dec 2022 01:32:55 GMT
+<
+* Closing connection 0
+5f8f409c-a47c-4a13-9a72-28e3bb5d4b7d%
